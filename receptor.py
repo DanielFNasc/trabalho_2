@@ -1,0 +1,5 @@
+
+
+def threadReceptora(quadro):
+
+    pass
