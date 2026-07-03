@@ -4,8 +4,6 @@ import queue
 
 
 def main():
-
-    quadros = queue.Queue()
     #threading.Thread(recptora)
     #threading.Thread(transmissora)
     pass
