@@ -3,7 +3,7 @@ import socket
 from Framing import Framing
 from CanalComRuido import CanalComRuido
 
-class TransmissorGBN:
+class Transmissor:
     def __init__(self):
         self.canal = CanalComRuido()
         # Criar variaveis da janela aqui (base, proximo, buffer)
