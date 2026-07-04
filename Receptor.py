@@ -2,7 +2,7 @@
 import socket
 from framing import Framing
 
-class ReceptorGBN:
+class Receptor:
     def __init__(self):
         # Criar variavel do frame esperado (começa em 0)
         pass
