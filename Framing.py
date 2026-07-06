@@ -21,8 +21,8 @@ class Framing:
         # cria cabecalho concatenando [1] tipo frame(0 dados, 1 ack) e [2] sequencia
         cabecalho = bytes([tipo_frame, num_seq])
 
-        # flag de início + cabeçalho + dados (falta CRC)
-        frame_parcial = Framing.FLAG + cabecalho + dados_com_stuffing
+        # cabeçalho + dados (falta CRC)
+        frame_parcial = cabecalho + dados_com_stuffing
 
         return frame_parcial
     
