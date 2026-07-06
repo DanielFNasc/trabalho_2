@@ -1,3 +1,5 @@
+#crc-16 kermit
+KEY = "0001000000100001"
 
 def bytes_para_bits(dados: bytes) -> str:
     return ''.join(f'{b:08b}' for b in dados)
@@ -87,13 +89,4 @@ def checkData(frame: bytes, polinomio: str) -> bool:
 
     return set(resto) == {'0'}    
 
-mensagem = b"10vncncbhwejlhbvefd0"
 
-#crc-16 kermit
-key = "0001000000100001"
-
-frame = encodeData(mensagem, key)
-
-print(frame)
-
-print(checkData(frame, key))
