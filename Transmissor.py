@@ -115,7 +115,7 @@ class Transmissor:
             print("[Transmissor] ACK corrompido, ignorado (vai depender do timeout).")
             return
  
-        tipo, num_seq_ack, _dados, _crc = Framing.desenquadrar(ack_bruto)
+        tipo, num_seq_ack, _dados = Framing.desenquadrar(ack_bruto)
  
         if tipo != 1:
             return  # não é um ACK

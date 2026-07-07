@@ -45,7 +45,7 @@ class Receptor:
                 continue
  
             #PASSO 3: chama o Framing para abrir o pacote
-            tipo, num_seq, dados, _crc = Framing.desenquadrar(dados_brutos)
+            tipo, num_seq, dados = Framing.desenquadrar(dados_brutos)
  
             # o receptor só trata frames de dados; ack's (tipo=1) não chegam aqui
             if tipo == 1:

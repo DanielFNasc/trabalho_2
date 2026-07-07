@@ -38,9 +38,7 @@ class Framing:
         tipo_frame = frame_completo[1]
         num_seq = frame_completo[2]
         
-        # CRC fica nos 2 bytes antes da flag de fim
-        # como o último byte [-1] é a flag de fim, o CRC ocupa [-3:-1]
-        crc_recebido = int.from_bytes(frame_completo[-3:-1], byteorder='big')
+        
         
         # extrai a parte dos dados com stuffing
         # dados começam na posição 3 e vai até antes do CRC (posição -3)
@@ -54,4 +52,4 @@ class Framing:
         # desfaz os escapes duplicados
         dados_puros = dados_puros.replace(Framing.ESC + Framing.ESC, Framing.ESC)
         
-        return tipo_frame, num_seq, dados_puros, crc_recebido
+        return tipo_frame, num_seq, dados_puros
