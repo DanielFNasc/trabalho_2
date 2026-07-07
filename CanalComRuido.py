@@ -29,6 +29,8 @@ class CanalComRuido:
         elif modo == "erro":
             print(f"Frame de índice {indice_frame} sofreu ruído e foi corrompido")
             
+            print("Frame antes de ser corrompido:")
+            print(frame)
             # cria uma cópia de frame só que com bytesarray pode alterar, bytes não
             frame_corrompido = bytearray(frame) 
             

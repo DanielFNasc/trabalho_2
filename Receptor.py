@@ -41,6 +41,7 @@ class Receptor:
             frame_sem_flags = dados_brutos[1:-1]
             if not ControleErros.checkData(frame_sem_flags, ControleErros.KEY):
                 print("[Receptor] Frame corrompido (CRC inválido) - descartado, sem ACK.")
+                print("[Receptor] Frame com erro: " + str(dados_brutos))
                 # não manda ack: o transmissor vai estourar o timeout e reenviar sozinho
                 continue
  
