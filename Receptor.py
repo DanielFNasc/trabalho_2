@@ -1,6 +1,6 @@
 # Arquivo: receptor.py
 import socket
-from framing import Framing
+from Framing import Framing
 
 class Receptor:
     def __init__(self):

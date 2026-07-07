@@ -1,7 +1,9 @@
 import threading
 import time
-import queue
 
+from Transmissor import Transmissor
+from Receptor import Receptor
+ 
 
 def main():
     #threading.Thread(recptora)
